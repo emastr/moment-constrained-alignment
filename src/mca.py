@@ -5,8 +5,8 @@ from jaxtyping import Array, Float
 def mca(y: Float[Array, "N L"], 
         sigma: float, 
         x0: Float[Array, "L"], 
-        tol: float=1e-10, 
-        maxiter: int=10000, 
+        tol: float=1e-6, 
+        maxiter: int=100000, 
         alpha: float=1.0, 
         callback: int=None, 
         project: bool=True) -> Float[Array, "L"]:

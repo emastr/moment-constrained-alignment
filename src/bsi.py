@@ -35,7 +35,7 @@ def _iterative_phase_synch(B: Complex[Array, "L L"],
                          prngkey=None) -> Complex[Array, "L"]:
     if isinstance(maxiter, int):
         inner_maxiter = maxiter
-        outer_maxiter = 15
+        outer_maxiter = 45
     elif isinstance(maxiter, tuple):
         if (len(maxiter) == 2):
             outer_maxiter, inner_maxiter = maxiter
@@ -43,7 +43,7 @@ def _iterative_phase_synch(B: Complex[Array, "L L"],
             raise ValueError('maxiter should be an integer or a tuple of two integers')
     else:
         inner_maxiter = 1000
-        outer_maxiter = 15
+        outer_maxiter = 45
         
     
     if prngkey is None:
